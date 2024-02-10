@@ -1,4 +1,6 @@
 .myfooter{
     font-family: 'Protest Riot', sans-serif;
-    bottom:0;
+    width: 100%;
+    bottom: 0;
+    position:relative;
 }

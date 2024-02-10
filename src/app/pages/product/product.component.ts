@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { ApiService } from '../../api.service';
 import { SlicePipe } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { StarRatingComponent } from '../../components/star-rating/star-rating.component';
 
 @Component({
   selector: 'app-product',
   standalone: true,
-  imports: [SlicePipe,RouterLink],
+  imports: [SlicePipe,RouterLink,StarRatingComponent],
   templateUrl: './product.component.html',
   styleUrl: './product.component.css'
 })

@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ApiService } from '../../api.service';
+import { StarRatingComponent } from '../../components/star-rating/star-rating.component';
 @Component({
   selector: 'app-single',
   standalone: true,
-  imports: [],
+  imports: [StarRatingComponent],
   templateUrl: './single.component.html',
   styleUrl: './single.component.css',
 })

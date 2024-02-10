@@ -1,26 +1,18 @@
-<div class="container">
-  
-      <div class="product-container main-product-container">
-        
-        <div class="product-left-container">
-          <img src={{data.image}} alt="" width="300px"/>
-        </div>
-        
-        <div class="product-col-container">
-          <h1 class="product-page">{{data.title}}</h1>
-          <p>
-            <b>Quick overview</b><br/>
-            {{data.description}}
-          </p>
-          
-          <p class="product-price">
-            <b>Price:$</b> 
-            <span class="price">{{data.price}}</span>
-          </p>
-          <p>
-          </p>
-        </div>
-      </div>
-      <br clear="all"/>
-      <div class="product-container">
+<div class="wrapper">
+  <div class="product-img">
+    <img src={{data.image}} height="420" alt="product-img" width="327">
+  </div>
+  <div class="product-info">
+    <div class="product-text">
+      <h1>{{data.title}}</h1>
+      <h2>{{data.category}}</h2>
+      <p>{{data.description}} </p>
     </div>
+    <p class="rating">
+      {{ data.rating.rate }}&nbsp;<app-star-rating [rating]=data.rating.rate></app-star-rating>
+          <br>{{ data.rating.count}}&nbsp;ratings
+    <div class="product-price-btn">
+      <p><span>Price : {{data.price}}$</span></p>
+    </div>
+  </div>
+</div>
