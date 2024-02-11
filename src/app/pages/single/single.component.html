@@ -1,4 +1,4 @@
-<div class="wrapper">
+<!-- <div class="wrapper">
   <div class="product-img">
     <img src={{data.image}} height="420" alt="product-img" width="327">
   </div>
@@ -10,9 +10,41 @@
     </div>
     <p class="rating">
       {{ data.rating.rate }}&nbsp;<app-star-rating [rating]=data.rating.rate></app-star-rating>
-          <br>{{ data.rating.count}}&nbsp;ratings
+          <br>{{ data.rating.count}}&nbsp;ratings</p>
     <div class="product-price-btn">
       <p><span>Price : {{data.price}}$</span></p>
     </div>
   </div>
+</div> -->
+<div class="box">
+
+  <div class="container mt-3 mb-3 d-flex justify-content-center align-items-center">
+      <div class="card" style="max-width: 540px">
+        <div class="row g-0">
+          <div class="col-md-4 d-flex align-items-center">
+            <img
+              src="{{ data.image }}"
+              class="img-fluid rounded-start"
+              alt="product-img"
+            />
+          </div>
+          <div class="col-md-8 d-flex align-items-center">
+            <div class="card-body">
+              <h5 class="card-title productTitle">{{ data.title }}</h5>
+              <p class="card-text">
+                <small class="text-muted categoryHeading">{{ data.category }}</small>
+              </p>
+              <p class="card-text productDescription">{{ data.description }}</p>
+              <p class="card-text">
+                {{ data.rating.rate }}&nbsp;<app-star-rating
+                  [rating]="data.rating.rate"
+                ></app-star-rating>
+                <br />{{ data.rating.count }}&nbsp;ratings
+              </p>
+              <p class="card-text price product-price">Price : ${{data.price}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 </div>
