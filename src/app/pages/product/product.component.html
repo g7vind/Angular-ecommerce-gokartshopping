@@ -5,9 +5,9 @@
       @for(item of data;track $index){
       <div class="col pb-3">
         <div
-          class="card d-flex"
+          class="card d-flex h-100"
           routerLink="{{ item.id }}"
-          style="width: 18rem; height: 650px"
+          style="width: 18rem; "
         >
           <img
             src="{{ item.image }}"
@@ -15,7 +15,7 @@
             alt="..."
             style="height: 300px"
           />
-          <div class="card-body">
+          <div class="card-body justify-content-center align-items-center">
             <h5 class="card-title">{{ item.title }}</h5>
             <p class="card-text">
               {{ item.rating.rate }}&nbsp;<app-star-rating [rating]=item.rating.rate></app-star-rating><span
